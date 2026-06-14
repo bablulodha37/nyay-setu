@@ -6,18 +6,6 @@
   <a href="https://nyaysetu-lovat.vercel.app/">
     <img src="https://img.shields.io/badge/Live%20Demo-nyaysetu.vercel.app-6C63FF?style=for-the-badge" alt="Live Demo" />
   </a>
-  &nbsp;
-  <a href="https://github.com/viru0909-dev/nyay-setu-working/issues">
-    <img src="https://img.shields.io/github/issues/viru0909-dev/nyay-setu-working?style=for-the-badge&color=E05C5C" alt="Open Issues" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/viru0909-dev/nyay-setu-working/pulls">
-    <img src="https://img.shields.io/github/issues-pr/viru0909-dev/nyay-setu-working?style=for-the-badge&color=43A047" alt="Pull Requests" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/viru0909-dev/nyay-setu-working/stargazers">
-    <img src="https://img.shields.io/github/stars/viru0909-dev/nyay-setu-working?style=for-the-badge&color=FFB300" alt="Stars" />
-  </a>
 </p>
 
 <p align="center">
