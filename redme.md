@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Nyay Setu — Digital Judiciary Platform for India" width="100%" />
+  Nyay Setu — Digital Judiciary Platform for India
 </p>
 
 <p align="center">
