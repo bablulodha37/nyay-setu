@@ -1,0 +1,5 @@
+# Created at 2026-07-02T00:43:47.133
+Boot Manifest-JAR contains absolute paths in classpath 'F:\sem 6\minar project\nyaysetu-backend\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

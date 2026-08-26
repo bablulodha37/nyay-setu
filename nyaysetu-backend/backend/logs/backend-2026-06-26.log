@@ -1,0 +1,272 @@
+2026-06-26 17:20:18 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-06-26 17:20:19 [main] INFO  c.n.b.NyaySetuBackendApplication - Starting NyaySetuBackendApplication using Java 24.0.2 with PID 3556 (F:\sem 6\minar project\nyaysetu-backend\target\classes started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-06-26 17:20:19 [main] INFO  c.n.b.NyaySetuBackendApplication - The following 1 profile is active: "dev"
+2026-06-26 17:20:27 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-26 17:20:29 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1756 ms. Found 27 JPA repository interfaces.
+2026-06-26 17:20:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-26 17:20:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-26 17:20:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-26 17:20:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-26 17:20:38 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-26 17:20:38 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 19388 ms
+2026-06-26 17:20:40 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-26 17:20:41 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-26 17:20:41 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-26 17:20:42 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-26 17:20:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-26 17:20:44 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26be0d23
+2026-06-26 17:20:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-26 17:20:44 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-26 17:20:53 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-26 17:20:54 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 17:20:58 [main] WARN  c.n.backend.config.SecurityConfig - JWT secret is using the default fallback value. Set JWT_SECRET in your environment for safer development setup.
+2026-06-26 17:20:59 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-26 17:21:12 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-06-26 17:21:12 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-06-26 17:21:17 [main] INFO  c.n.b.s.DocumentGenerationService - 📝 DocumentGenerationService configured to use LawGPT at: http://localhost:8001
+2026-06-26 17:21:18 [main] INFO  c.n.backend.service.RagService - 🔗 RagService configured to use LawGPT at: http://localhost:8001
+2026-06-26 17:21:20 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-26 17:21:25 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2026-06-26 17:21:25 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@27bcfd19]]
+2026-06-26 17:21:25 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2026-06-26 17:21:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-26 17:21:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-06-26 17:21:26 [main] INFO  c.n.b.NyaySetuBackendApplication - Started NyaySetuBackendApplication in 70.696 seconds (process running for 91.243)
+2026-06-26 17:21:28 [main] INFO  c.n.b.NyaySetuBackendApplication - NyaySetu backend started successfully
+2026-06-26 17:22:25 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-26 17:26:51 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-26 17:26:51 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-26 17:26:51 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2026-06-26 17:26:51 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:26:51 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:27:48 [http-nio-8080-exec-2] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:27:48 [http-nio-8080-exec-2] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:28:52 [http-nio-8080-exec-4] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:28:52 [http-nio-8080-exec-4] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:29:00 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:29:00 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:30:43 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:30:43 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:30:46 [http-nio-8080-exec-8] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:30:46 [http-nio-8080-exec-8] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:30:46 [http-nio-8080-exec-9] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:30:46 [http-nio-8080-exec-9] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:30:47 [http-nio-8080-exec-10] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:30:47 [http-nio-8080-exec-10] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:30:47 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:30:47 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:30:47 [http-nio-8080-exec-2] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:30:47 [http-nio-8080-exec-2] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:30:48 [http-nio-8080-exec-2] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:30:48 [http-nio-8080-exec-3] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:30:48 [http-nio-8080-exec-3] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:30:48 [http-nio-8080-exec-3] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:30:48 [http-nio-8080-exec-4] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:30:48 [http-nio-8080-exec-4] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:30:48 [http-nio-8080-exec-4] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:30:49 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:30:49 [http-nio-8080-exec-5] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:30:49 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:38:09 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:09 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:38:37 [http-nio-8080-exec-8] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:37 [http-nio-8080-exec-8] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:38:40 [http-nio-8080-exec-9] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:40 [http-nio-8080-exec-9] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:38:41 [http-nio-8080-exec-10] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:41 [http-nio-8080-exec-10] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:38:41 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:41 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 17:38:42 [http-nio-8080-exec-2] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:42 [http-nio-8080-exec-2] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:38:42 [http-nio-8080-exec-2] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:38:42 [http-nio-8080-exec-3] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:42 [http-nio-8080-exec-3] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:38:42 [http-nio-8080-exec-3] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:38:42 [http-nio-8080-exec-4] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:42 [http-nio-8080-exec-4] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:38:42 [http-nio-8080-exec-4] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:38:42 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:42 [http-nio-8080-exec-5] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:38:42 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:38:42 [http-nio-8080-exec-6] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:42 [http-nio-8080-exec-6] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:38:42 [http-nio-8080-exec-6] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:38:43 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:43 [http-nio-8080-exec-7] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:38:43 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:38:46 [http-nio-8080-exec-8] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:46 [http-nio-8080-exec-8] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:38:46 [http-nio-8080-exec-8] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:38:47 [http-nio-8080-exec-9] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:47 [http-nio-8080-exec-9] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:38:47 [http-nio-8080-exec-9] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:38:48 [http-nio-8080-exec-10] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:48 [http-nio-8080-exec-10] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:38:48 [http-nio-8080-exec-10] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:38:49 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 17:38:49 [http-nio-8080-exec-1] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 0:0:0:0:0:0:0:1 on endpoint: /api/v1/auth/register
+2026-06-26 17:38:49 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 429
+2026-06-26 17:52:25 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2026-06-26 18:00:09 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m24s986ms824µs900ns).
+2026-06-26 18:04:27 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-26 18:04:27 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-26 18:04:27 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2026-06-26 18:04:27 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@27bcfd19]]
+2026-06-26 18:04:27 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2026-06-26 18:04:27 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 18:04:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-26 18:04:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-26 18:12:50 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-06-26 18:12:50 [main] INFO  c.n.b.NyaySetuBackendApplication - Starting NyaySetuBackendApplication using Java 24.0.2 with PID 19552 (F:\sem 6\minar project\nyaysetu-backend\target\classes started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-06-26 18:12:50 [main] INFO  c.n.b.NyaySetuBackendApplication - The following 1 profile is active: "dev"
+2026-06-26 18:12:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-26 18:12:56 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 903 ms. Found 27 JPA repository interfaces.
+2026-06-26 18:12:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-26 18:12:59 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-26 18:12:59 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-26 18:12:59 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-26 18:13:00 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-26 18:13:00 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9646 ms
+2026-06-26 18:13:01 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-26 18:13:01 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-26 18:13:01 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-26 18:13:02 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-26 18:13:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-26 18:13:03 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33b2ba25
+2026-06-26 18:13:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-26 18:13:03 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-26 18:13:08 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-26 18:13:08 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 18:13:10 [main] WARN  c.n.backend.config.SecurityConfig - JWT secret is using the default fallback value. Set JWT_SECRET in your environment for safer development setup.
+2026-06-26 18:13:10 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-26 18:13:12 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-06-26 18:13:12 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-06-26 18:13:15 [main] INFO  c.n.b.s.DocumentGenerationService - 📝 DocumentGenerationService configured to use LawGPT at: http://localhost:8001
+2026-06-26 18:13:15 [main] INFO  c.n.backend.service.RagService - 🔗 RagService configured to use LawGPT at: http://localhost:8001
+2026-06-26 18:13:17 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-26 18:13:20 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2026-06-26 18:13:20 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4b28e19b]]
+2026-06-26 18:13:20 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2026-06-26 18:13:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-26 18:13:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-06-26 18:13:20 [main] INFO  c.n.b.NyaySetuBackendApplication - Started NyaySetuBackendApplication in 32.115 seconds (process running for 33.803)
+2026-06-26 18:13:21 [main] INFO  c.n.b.NyaySetuBackendApplication - NyaySetu backend started successfully
+2026-06-26 18:14:20 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-26 18:14:55 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-26 18:14:55 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-26 18:14:55 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-06-26 18:14:55 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:14:56 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:15:10 [http-nio-8080-exec-2] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:15:10 [http-nio-8080-exec-2] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:23:38 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-26 18:23:38 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-26 18:23:38 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2026-06-26 18:23:38 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4b28e19b]]
+2026-06-26 18:23:38 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2026-06-26 18:23:38 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 18:23:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-26 18:23:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-26 18:24:05 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-06-26 18:24:05 [main] INFO  c.n.b.NyaySetuBackendApplication - Starting NyaySetuBackendApplication using Java 24.0.2 with PID 20788 (F:\sem 6\minar project\nyaysetu-backend\target\classes started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-06-26 18:24:05 [main] INFO  c.n.b.NyaySetuBackendApplication - The following 1 profile is active: "dev"
+2026-06-26 18:24:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-26 18:24:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 849 ms. Found 27 JPA repository interfaces.
+2026-06-26 18:24:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-06-26 18:24:14 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-06-26 18:24:14 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-26 18:24:14 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-06-26 18:24:15 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-26 18:24:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9786 ms
+2026-06-26 18:24:16 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-26 18:24:16 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-06-26 18:24:16 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-26 18:24:17 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-26 18:24:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-26 18:24:18 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@576b385d
+2026-06-26 18:24:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-26 18:24:18 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-26 18:24:23 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-26 18:24:23 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 18:24:24 [main] WARN  c.n.backend.config.SecurityConfig - JWT secret is using the default fallback value. Set JWT_SECRET in your environment for safer development setup.
+2026-06-26 18:24:24 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-26 18:24:27 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-06-26 18:24:27 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-06-26 18:24:31 [main] INFO  c.n.b.s.DocumentGenerationService - 📝 DocumentGenerationService configured to use LawGPT at: http://localhost:8001
+2026-06-26 18:24:32 [main] INFO  c.n.backend.service.RagService - 🔗 RagService configured to use LawGPT at: http://localhost:8001
+2026-06-26 18:24:33 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-26 18:24:36 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2026-06-26 18:24:36 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6748d248]]
+2026-06-26 18:24:36 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2026-06-26 18:24:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-06-26 18:24:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-06-26 18:24:36 [main] INFO  c.n.b.NyaySetuBackendApplication - Started NyaySetuBackendApplication in 33.5 seconds (process running for 35.172)
+2026-06-26 18:24:38 [main] INFO  c.n.b.NyaySetuBackendApplication - NyaySetu backend started successfully
+2026-06-26 18:24:57 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-26 18:24:57 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-26 18:24:58 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-06-26 18:24:58 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:24:58 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:24:58 [http-nio-8080-exec-2] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:24:58 [http-nio-8080-exec-2] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:24:59 [http-nio-8080-exec-3] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:24:59 [http-nio-8080-exec-3] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:24:59 [http-nio-8080-exec-4] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:24:59 [http-nio-8080-exec-4] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:25:00 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:25:00 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:25:00 [http-nio-8080-exec-6] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:25:00 [http-nio-8080-exec-6] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:25:00 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:25:00 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:25:01 [http-nio-8080-exec-8] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:25:01 [http-nio-8080-exec-8] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:25:36 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-06-26 18:25:46 [http-nio-8080-exec-9] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:25:46 [http-nio-8080-exec-9] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:26:01 [http-nio-8080-exec-10] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: GET /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:26:01 [http-nio-8080-exec-10] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: GET /api/v1/auth/register -> Status: 500
+2026-06-26 18:26:01 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: GET /favicon.ico from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:26:01 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: GET /favicon.ico -> Status: 403
+2026-06-26 18:27:35 [http-nio-8080-exec-4] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:27:35 [http-nio-8080-exec-4] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:27:40 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:27:40 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:27:41 [http-nio-8080-exec-6] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:27:41 [http-nio-8080-exec-6] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:27:41 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:27:42 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:27:42 [http-nio-8080-exec-8] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:27:42 [http-nio-8080-exec-8] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:27:42 [http-nio-8080-exec-9] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-06-26 18:27:42 [http-nio-8080-exec-9] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-06-26 18:33:12 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-26 18:33:12 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-26 18:33:12 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2026-06-26 18:33:12 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6748d248]]
+2026-06-26 18:33:12 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2026-06-26 18:33:12 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-26 18:33:12 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-26 18:33:12 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

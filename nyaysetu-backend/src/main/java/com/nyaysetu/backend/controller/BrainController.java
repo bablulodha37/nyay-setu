@@ -1,0 +1,86 @@
+package com.nyaysetu.backend.controller;
+
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nyaysetu.backend.entity.User;
+import com.nyaysetu.backend.service.AuthService;
+import com.nyaysetu.backend.service.NyaySetuBrainService;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * REST Controller for the Central AI Brain
+ */
+@Tag(name = "NyaySetu Brain (AI)", description = "Central AI engine for legal analysis and recommendations")
+@RestController
+@RequestMapping("/brain")
+@RequiredArgsConstructor
+@Slf4j
+public class BrainController {
+
+    private final NyaySetuBrainService brainService;
+    private final AuthService authService;
+
+    /**
+     * unified brain chat endpoint
+     */
+    @PostMapping("/chat")
+    public ResponseEntity<Map<String, Object>> chat(
+            @RequestBody Map<String, String> request,
+            @AuthenticationPrincipal UserDetails userDetails) {
+        
+        String message = request.get("message");
+        String sessionIdStr = request.get("sessionId");
+        UUID sessionId = (sessionIdStr != null && !sessionIdStr.isEmpty()) ? UUID.fromString(sessionIdStr) : null;
+
+        User user = null;
+        if (userDetails != null) {
+            try {
+                user = authService.findByEmail(userDetails.getUsername());
+            } catch (org.springframework.security.core.userdetails.UsernameNotFoundException e) {
+                log.warn("Authenticated principal not found in database: {}", userDetails.getUsername());
+            }
+        }
+
+        log.info("🧠 Brain request from role: {}, msg: {}", (user != null ? user.getRole() : "GUEST"), message);
+        
+        Map<String, Object> response = brainService.process(sessionId, message, user);
+        return ResponseEntity.ok(response);
+    }
+
+    /**
+     * Analyze case intent (FIR vs Court Case)
+     */
+    @PostMapping("/analyze-case")
+    public ResponseEntity<Map<String, String>> analyzeCase(@RequestBody Map<String, String> request) {
+        String query = request.get("query");
+        log.info("🧠 Brain Case Analysis request for: {}", query);
+        Map<String, String> analysis = brainService.analyzeCaseIntent(query);
+        return ResponseEntity.ok(analysis);
+    }
+
+    /**
+     * Suggest documents based on case details
+     */
+    @PostMapping("/suggest-documents")
+    public ResponseEntity<Map<String, Object>> suggestDocuments(@RequestBody Map<String, Object> request) {
+        @SuppressWarnings("unchecked")
+        Map<String, String> caseDetails = (Map<String, String>) request.get("caseDetails");
+        log.info("🧠 Brain Document Suggestion request for case type: {}", caseDetails.get("caseType"));
+        
+        List<String> suggestions = brainService.suggestDocuments(caseDetails);
+        return ResponseEntity.ok(Map.of("suggestions", suggestions));
+    }
+}

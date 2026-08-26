@@ -1,0 +1,999 @@
+2026-07-02 00:14:10 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-07-02 00:14:10 [main] INFO  c.n.b.c.DocumentGenerationControllerTest - Starting DocumentGenerationControllerTest using Java 21.0.8 with PID 21064 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:14:10 [main] INFO  c.n.b.c.DocumentGenerationControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-07-02 00:14:21 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [org.springframework.security.core.userdetails.UserDetailsService#0, com.nyaysetu.backend.service.AuthService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2026-07-02 00:14:22 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-02 00:14:22 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-02 00:14:22 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2026-07-02 00:14:23 [main] INFO  c.n.b.c.DocumentGenerationControllerTest - Started DocumentGenerationControllerTest in 14.514 seconds (process running for 27.35)
+2026-07-02 00:14:23 [main] INFO  c.n.b.c.DocumentGenerationController - 📝 Document preview requested by Test User (LITIGANT)
+2026-07-02 00:14:23 [main] INFO  c.n.b.c.DocumentGenerationController - 📄 PDF download requested by Lawyer User (LAWYER)
+2026-07-02 00:14:23 [main] INFO  c.n.b.c.DocumentGenerationController - 📄 PDF generated, SHA-256: dummyhash1234567...
+2026-07-02 00:14:23 [main] INFO  c.n.b.c.DocumentGenerationController - 📄 DOCX download requested by Lawyer User (LAWYER)
+2026-07-02 00:14:24 [main] ERROR c.n.b.c.DocumentManagementController - Certificate generation failed for document e10c8c37-497e-46d3-aa74-5f9ce6ce1745
+java.lang.RuntimeException: Generator failure
+	at com.nyaysetu.backend.service.CertificateService.generateDocumentCertificate(CertificateService.java:51)
+	at com.nyaysetu.backend.controller.DocumentManagementController.downloadCertificate(DocumentManagementController.java:273)
+	at com.nyaysetu.backend.controller.DocumentManagementControllerTest.downloadCertificate_shouldReturn500WhenCertificateGenerationFails(DocumentManagementControllerTest.java:83)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithoutCancellationToken(LauncherAdapter.java:60)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:52)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-07-02 00:14:24 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.controller.HealthControllerTest]: HealthControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:14:25 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.controller.HealthControllerTest
+2026-07-02 00:14:25 [main] INFO  c.n.b.c.HealthControllerTest - Starting HealthControllerTest using Java 21.0.8 with PID 21064 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:14:25 [main] INFO  c.n.b.c.HealthControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-07-02 00:14:28 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name org.springframework.security.core.userdetails.UserDetailsService#0
+2026-07-02 00:14:28 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-02 00:14:28 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-02 00:14:28 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 6 ms
+2026-07-02 00:14:29 [main] INFO  c.n.b.c.HealthControllerTest - Started HealthControllerTest in 4.533 seconds (process running for 33.823)
+2026-07-02 00:14:31 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.controller.RbacSecurityTest]: RbacSecurityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:14:32 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.controller.RbacSecurityTest
+2026-07-02 00:14:35 [main] INFO  c.n.b.controller.RbacSecurityTest - Starting RbacSecurityTest using Java 21.0.8 with PID 21064 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:14:35 [main] INFO  c.n.b.controller.RbacSecurityTest - The following 1 profile is active: "test"
+2026-07-02 00:14:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-02 00:14:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 574 ms. Found 27 JPA repository interfaces.
+2026-07-02 00:14:43 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-02 00:14:43 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-07-02 00:14:43 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-02 00:14:44 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-02 00:14:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-02 00:14:45 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-07-02 00:14:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-02 00:14:45 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-02 00:14:50 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-02 00:14:50 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:14:52 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-02 00:14:54 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-07-02 00:14:54 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-07-02 00:14:58 [main] INFO  c.n.b.s.DocumentGenerationService - 📝 DocumentGenerationService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:14:59 [main] INFO  c.n.backend.service.RagService - 🔗 RagService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:15:00 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-02 00:15:03 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-02 00:15:03 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-02 00:15:03 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+2026-07-02 00:15:03 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2026-07-02 00:15:03 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6b3f6903]]
+2026-07-02 00:15:03 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2026-07-02 00:15:03 [main] INFO  c.n.b.controller.RbacSecurityTest - Started RbacSecurityTest in 30.371 seconds (process running for 67.727)
+2026-07-02 00:15:04 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: admin@nyay.com
+2026-07-02 00:15:04 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: judge@nyay.com
+2026-07-02 00:15:04 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: lawyer@nyay.com
+2026-07-02 00:15:05 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: litigant@nyay.com
+2026-07-02 00:15:05 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: client@nyay.com
+2026-07-02 00:15:05 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: tech@nyay.com
+2026-07-02 00:15:05 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: police@nyay.com
+2026-07-02 00:15:05 [main] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: GET /api/v1/cases from 127.0.0.1 | Content-Type: null | Auth: NULL
+2026-07-02 00:15:05 [main] INFO  c.n.b.c.CaseManagementController - Getting cases for user: litigant@example.com
+2026-07-02 00:15:05 [main] ERROR c.n.b.c.CaseManagementController - Error fetching cases for user litigant@example.com: User not found
+2026-07-02 00:15:05 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-07-02 00:15:05 [main] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: GET /api/v1/cases -> Status: 200
+2026-07-02 00:15:05 [main] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: GET /api/v1/cases/pending-assignment from 127.0.0.1 | Content-Type: null | Auth: NULL
+2026-07-02 00:15:05 [main] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: GET /api/v1/cases/pending-assignment -> Status: 403
+2026-07-02 00:15:05 [main] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: GET /api/v1/judge/cases from 127.0.0.1 | Content-Type: null | Auth: NULL
+2026-07-02 00:15:05 [main] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: GET /api/v1/judge/cases -> Status: 403
+2026-07-02 00:15:06 [main] WARN  c.n.backend.filter.JwtAuthFilter - JWT validation failed: JWT expired 1312 milliseconds ago at 2026-07-01T18:45:05.000Z. Current time: 2026-07-01T18:45:06.312Z. Allowed clock skew: 0 milliseconds.
+2026-07-02 00:15:06 [main] WARN  c.n.backend.filter.JwtAuthFilter - JWT validation failed: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 3
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: B
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session B
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: B
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session B
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - Session A closed for user 1
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - Session A closed for user 1
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: B
+2026-07-02 00:15:07 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session B
+2026-07-02 00:15:07 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.NyaySetuBackendApplicationTests]: NyaySetuBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:15:07 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.NyaySetuBackendApplicationTests
+2026-07-02 00:15:08 [main] INFO  c.n.b.NyaySetuBackendApplicationTests - Starting NyaySetuBackendApplicationTests using Java 21.0.8 with PID 21064 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:15:08 [main] INFO  c.n.b.NyaySetuBackendApplicationTests - The following 1 profile is active: "test"
+2026-07-02 00:15:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-02 00:15:09 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 219 ms. Found 27 JPA repository interfaces.
+2026-07-02 00:15:10 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-02 00:15:10 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-02 00:15:10 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-02 00:15:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-07-02 00:15:10 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-07-02 00:15:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-07-02 00:15:10 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-02 00:15:11 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-02 00:15:11 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:15:12 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-07-02 00:15:12 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-07-02 00:15:14 [main] INFO  c.n.b.s.DocumentGenerationService - 📝 DocumentGenerationService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:15:17 [main] INFO  c.n.backend.service.RagService - 🔗 RagService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:15:20 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-02 00:15:23 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2026-07-02 00:15:23 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4b534c12]]
+2026-07-02 00:15:23 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2026-07-02 00:15:23 [main] INFO  c.n.b.NyaySetuBackendApplicationTests - Started NyaySetuBackendApplicationTests in 15.488 seconds (process running for 87.739)
+2026-07-02 00:15:23 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: admin@nyay.com
+2026-07-02 00:15:23 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: judge@nyay.com
+2026-07-02 00:15:23 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: lawyer@nyay.com
+2026-07-02 00:15:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: litigant@nyay.com
+2026-07-02 00:15:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: client@nyay.com
+2026-07-02 00:15:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: tech@nyay.com
+2026-07-02 00:15:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: police@nyay.com
+2026-07-02 00:15:25 [main] ERROR c.n.b.service.CaseManagementService - Failed to auto-generate draft document
+java.lang.NullPointerException: Cannot invoke "String.getBytes()" because "draftContent" is null
+	at com.nyaysetu.backend.service.CaseManagementService.sendDraftForApproval(CaseManagementService.java:147)
+	at com.nyaysetu.backend.service.CaseManagementServiceTest.lambda$sendDraftForApproval_swallowsException_whenDraftContentIsNull$1(CaseManagementServiceTest.java:61)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3199)
+	at com.nyaysetu.backend.service.CaseManagementServiceTest.sendDraftForApproval_swallowsException_whenDraftContentIsNull(CaseManagementServiceTest.java:61)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithoutCancellationToken(LauncherAdapter.java:60)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:52)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-07-02 00:15:25 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.service.SoftDeleteIntegrationTest]: SoftDeleteIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:15:25 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.service.SoftDeleteIntegrationTest
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6b3f6903]]
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@4b534c12]]
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-07-02 00:15:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-07-02 00:17:28 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-07-02 00:17:28 [main] INFO  c.n.b.c.DocumentGenerationControllerTest - Starting DocumentGenerationControllerTest using Java 21.0.8 with PID 15380 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:17:28 [main] INFO  c.n.b.c.DocumentGenerationControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-07-02 00:17:37 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [org.springframework.security.core.userdetails.UserDetailsService#0, com.nyaysetu.backend.service.AuthService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2026-07-02 00:17:38 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-02 00:17:38 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-02 00:17:38 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 10 ms
+2026-07-02 00:17:38 [main] INFO  c.n.b.c.DocumentGenerationControllerTest - Started DocumentGenerationControllerTest in 12.035 seconds (process running for 23.058)
+2026-07-02 00:17:39 [main] INFO  c.n.b.c.DocumentGenerationController - 📝 Document preview requested by Test User (LITIGANT)
+2026-07-02 00:17:39 [main] INFO  c.n.b.c.DocumentGenerationController - 📄 PDF download requested by Lawyer User (LAWYER)
+2026-07-02 00:17:39 [main] INFO  c.n.b.c.DocumentGenerationController - 📄 PDF generated, SHA-256: dummyhash1234567...
+2026-07-02 00:17:39 [main] INFO  c.n.b.c.DocumentGenerationController - 📄 DOCX download requested by Lawyer User (LAWYER)
+2026-07-02 00:17:40 [main] ERROR c.n.b.c.DocumentManagementController - Certificate generation failed for document 9509359e-30cb-4df2-8e4e-844478a9a039
+java.lang.RuntimeException: Generator failure
+	at com.nyaysetu.backend.service.CertificateService.generateDocumentCertificate(CertificateService.java:51)
+	at com.nyaysetu.backend.controller.DocumentManagementController.downloadCertificate(DocumentManagementController.java:273)
+	at com.nyaysetu.backend.controller.DocumentManagementControllerTest.downloadCertificate_shouldReturn500WhenCertificateGenerationFails(DocumentManagementControllerTest.java:83)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithoutCancellationToken(LauncherAdapter.java:60)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:52)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-07-02 00:17:40 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.controller.HealthControllerTest]: HealthControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:17:40 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.controller.HealthControllerTest
+2026-07-02 00:17:40 [main] INFO  c.n.b.c.HealthControllerTest - Starting HealthControllerTest using Java 21.0.8 with PID 15380 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:17:40 [main] INFO  c.n.b.c.HealthControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-07-02 00:17:43 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name org.springframework.security.core.userdetails.UserDetailsService#0
+2026-07-02 00:17:43 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-02 00:17:43 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-02 00:17:43 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-07-02 00:17:43 [main] INFO  c.n.b.c.HealthControllerTest - Started HealthControllerTest in 3.246 seconds (process running for 28.093)
+2026-07-02 00:17:44 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.controller.RbacSecurityTest]: RbacSecurityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:17:44 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.controller.RbacSecurityTest
+2026-07-02 00:17:44 [main] INFO  c.n.b.controller.RbacSecurityTest - Starting RbacSecurityTest using Java 21.0.8 with PID 15380 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:17:44 [main] INFO  c.n.b.controller.RbacSecurityTest - The following 1 profile is active: "test"
+2026-07-02 00:17:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-02 00:17:47 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 784 ms. Found 27 JPA repository interfaces.
+2026-07-02 00:17:50 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-02 00:17:50 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-07-02 00:17:50 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-02 00:17:50 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-02 00:17:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-02 00:17:51 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-07-02 00:17:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-02 00:17:52 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-02 00:17:57 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-02 00:17:58 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:17:59 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-02 00:18:02 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-07-02 00:18:02 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-07-02 00:18:05 [main] INFO  c.n.b.s.DocumentGenerationService - 📝 DocumentGenerationService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:18:06 [main] INFO  c.n.backend.service.RagService - 🔗 RagService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:18:07 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-02 00:18:10 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-02 00:18:10 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-02 00:18:10 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+2026-07-02 00:18:10 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2026-07-02 00:18:10 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7144a18d]]
+2026-07-02 00:18:10 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2026-07-02 00:18:10 [main] INFO  c.n.b.controller.RbacSecurityTest - Started RbacSecurityTest in 26.579 seconds (process running for 54.986)
+2026-07-02 00:18:11 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: admin@nyay.com
+2026-07-02 00:18:11 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: judge@nyay.com
+2026-07-02 00:18:12 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: lawyer@nyay.com
+2026-07-02 00:18:12 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: litigant@nyay.com
+2026-07-02 00:18:12 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: client@nyay.com
+2026-07-02 00:18:12 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: tech@nyay.com
+2026-07-02 00:18:12 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: police@nyay.com
+2026-07-02 00:18:12 [main] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: GET /api/v1/cases from 127.0.0.1 | Content-Type: null | Auth: NULL
+2026-07-02 00:18:12 [main] INFO  c.n.b.c.CaseManagementController - Getting cases for user: litigant@example.com
+2026-07-02 00:18:12 [main] ERROR c.n.b.c.CaseManagementController - Error fetching cases for user litigant@example.com: User not found
+2026-07-02 00:18:12 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-07-02 00:18:12 [main] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: GET /api/v1/cases -> Status: 200
+2026-07-02 00:18:12 [main] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: GET /api/v1/cases/pending-assignment from 127.0.0.1 | Content-Type: null | Auth: NULL
+2026-07-02 00:18:12 [main] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: GET /api/v1/cases/pending-assignment -> Status: 403
+2026-07-02 00:18:12 [main] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: GET /api/v1/judge/cases from 127.0.0.1 | Content-Type: null | Auth: NULL
+2026-07-02 00:18:12 [main] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: GET /api/v1/judge/cases -> Status: 403
+2026-07-02 00:18:13 [main] WARN  c.n.backend.filter.JwtAuthFilter - JWT validation failed: JWT expired 1431 milliseconds ago at 2026-07-01T18:48:12.000Z. Current time: 2026-07-01T18:48:13.431Z. Allowed clock skew: 0 milliseconds.
+2026-07-02 00:18:13 [main] WARN  c.n.backend.filter.JwtAuthFilter - JWT validation failed: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 3
+2026-07-02 00:18:14 [main] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 10.0.0.1 on endpoint: /api/v1/auth/login
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: B
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session B
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: B
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session B
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - Session A closed for user 1
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - Session A closed for user 1
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: B
+2026-07-02 00:18:14 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session B
+2026-07-02 00:18:15 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.NyaySetuBackendApplicationTests]: NyaySetuBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:18:15 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.NyaySetuBackendApplicationTests
+2026-07-02 00:18:15 [main] INFO  c.n.b.NyaySetuBackendApplicationTests - Starting NyaySetuBackendApplicationTests using Java 21.0.8 with PID 15380 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:18:15 [main] INFO  c.n.b.NyaySetuBackendApplicationTests - The following 1 profile is active: "test"
+2026-07-02 00:18:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-02 00:18:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 233 ms. Found 27 JPA repository interfaces.
+2026-07-02 00:18:17 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-02 00:18:17 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-02 00:18:17 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-02 00:18:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-07-02 00:18:17 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-07-02 00:18:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-07-02 00:18:17 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-02 00:18:18 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-02 00:18:19 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:18:19 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-07-02 00:18:19 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-07-02 00:18:21 [main] INFO  c.n.b.s.DocumentGenerationService - 📝 DocumentGenerationService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:18:22 [main] INFO  c.n.backend.service.RagService - 🔗 RagService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:18:22 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-02 00:18:23 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2026-07-02 00:18:23 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@38d78a07]]
+2026-07-02 00:18:23 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2026-07-02 00:18:23 [main] INFO  c.n.b.NyaySetuBackendApplicationTests - Started NyaySetuBackendApplicationTests in 8.388 seconds (process running for 67.993)
+2026-07-02 00:18:23 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: admin@nyay.com
+2026-07-02 00:18:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: judge@nyay.com
+2026-07-02 00:18:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: lawyer@nyay.com
+2026-07-02 00:18:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: litigant@nyay.com
+2026-07-02 00:18:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: client@nyay.com
+2026-07-02 00:18:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: tech@nyay.com
+2026-07-02 00:18:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: police@nyay.com
+2026-07-02 00:18:25 [main] ERROR c.n.b.service.CaseManagementService - Failed to auto-generate draft document
+java.lang.NullPointerException: Cannot invoke "String.getBytes()" because "draftContent" is null
+	at com.nyaysetu.backend.service.CaseManagementService.sendDraftForApproval(CaseManagementService.java:147)
+	at com.nyaysetu.backend.service.CaseManagementServiceTest.lambda$sendDraftForApproval_swallowsException_whenDraftContentIsNull$1(CaseManagementServiceTest.java:61)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3199)
+	at com.nyaysetu.backend.service.CaseManagementServiceTest.sendDraftForApproval_swallowsException_whenDraftContentIsNull(CaseManagementServiceTest.java:61)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithoutCancellationToken(LauncherAdapter.java:60)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:52)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-07-02 00:18:25 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.service.SoftDeleteIntegrationTest]: SoftDeleteIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:18:26 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.service.SoftDeleteIntegrationTest
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7144a18d]]
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@38d78a07]]
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-07-02 00:18:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-07-02 00:24:12 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-07-02 00:24:12 [main] INFO  c.n.b.NyaySetuBackendApplication - Starting NyaySetuBackendApplication using Java 24.0.2 with PID 7660 (F:\sem 6\minar project\nyaysetu-backend\target\classes started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:24:12 [main] INFO  c.n.b.NyaySetuBackendApplication - The following 1 profile is active: "dev"
+2026-07-02 00:24:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-02 00:24:16 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 621 ms. Found 27 JPA repository interfaces.
+2026-07-02 00:24:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-02 00:24:19 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-07-02 00:24:19 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-02 00:24:19 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-07-02 00:24:19 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-07-02 00:24:19 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7001 ms
+2026-07-02 00:24:20 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-02 00:24:20 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-07-02 00:24:20 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-02 00:24:21 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-02 00:24:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-02 00:24:21 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c7f804c
+2026-07-02 00:24:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-02 00:24:22 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-02 00:24:25 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-02 00:24:26 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:24:27 [main] WARN  c.n.backend.config.SecurityConfig - JWT secret is using the default fallback value. Set JWT_SECRET in your environment for safer development setup.
+2026-07-02 00:24:27 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-02 00:24:29 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-07-02 00:24:29 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-07-02 00:24:32 [main] INFO  c.n.b.s.DocumentGenerationService - 📝 DocumentGenerationService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:24:33 [main] INFO  c.n.backend.service.RagService - 🔗 RagService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:24:34 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-02 00:24:36 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2026-07-02 00:24:36 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7e853285]]
+2026-07-02 00:24:36 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2026-07-02 00:24:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-07-02 00:24:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-07-02 00:24:36 [main] INFO  c.n.b.NyaySetuBackendApplication - Started NyaySetuBackendApplication in 26.697 seconds (process running for 29.948)
+2026-07-02 00:24:38 [main] INFO  c.n.b.NyaySetuBackendApplication - NyaySetu backend started successfully
+2026-07-02 00:25:36 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2026-07-02 00:25:57 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-02 00:25:57 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-02 00:25:57 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-07-02 00:25:57 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-07-02 00:25:57 [http-nio-8080-exec-1] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-07-02 00:30:28 [http-nio-8080-exec-3] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/login from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-07-02 00:30:28 [http-nio-8080-exec-3] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/login -> Status: 200
+2026-07-02 00:31:59 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-07-02 00:31:59 [http-nio-8080-exec-5] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-07-02 00:32:16 [http-nio-8080-exec-6] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-07-02 00:32:16 [http-nio-8080-exec-6] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-07-02 00:32:21 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: OPTIONS /api/v1/auth/register from 0:0:0:0:0:0:0:1 | Content-Type: null | Auth: NULL
+2026-07-02 00:32:21 [http-nio-8080-exec-7] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: OPTIONS /api/v1/auth/register -> Status: 200
+2026-07-02 00:39:58 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-02 00:39:58 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-07-02 00:39:58 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2026-07-02 00:39:58 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7e853285]]
+2026-07-02 00:39:58 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2026-07-02 00:39:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:39:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-02 00:39:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-02 00:43:56 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-07-02 00:43:56 [main] INFO  c.n.b.c.DocumentGenerationControllerTest - Starting DocumentGenerationControllerTest using Java 21.0.8 with PID 17520 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:43:56 [main] INFO  c.n.b.c.DocumentGenerationControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-07-02 00:44:02 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [org.springframework.security.core.userdetails.UserDetailsService#0, com.nyaysetu.backend.service.AuthService#0]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2026-07-02 00:44:02 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-02 00:44:02 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-02 00:44:02 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-07-02 00:44:03 [main] INFO  c.n.b.c.DocumentGenerationControllerTest - Started DocumentGenerationControllerTest in 7.828 seconds (process running for 15.688)
+2026-07-02 00:44:03 [main] INFO  c.n.b.c.DocumentGenerationController - 📝 Document preview requested by Test User (LITIGANT)
+2026-07-02 00:44:03 [main] INFO  c.n.b.c.DocumentGenerationController - 📄 PDF download requested by Lawyer User (LAWYER)
+2026-07-02 00:44:03 [main] INFO  c.n.b.c.DocumentGenerationController - 📄 PDF generated, SHA-256: dummyhash1234567...
+2026-07-02 00:44:03 [main] INFO  c.n.b.c.DocumentGenerationController - 📄 DOCX download requested by Lawyer User (LAWYER)
+2026-07-02 00:44:04 [main] ERROR c.n.b.c.DocumentManagementController - Certificate generation failed for document bb1c911c-6dac-4059-bfa7-c4cf05cf9a33
+java.lang.RuntimeException: Generator failure
+	at com.nyaysetu.backend.service.CertificateService.generateDocumentCertificate(CertificateService.java:51)
+	at com.nyaysetu.backend.controller.DocumentManagementController.downloadCertificate(DocumentManagementController.java:273)
+	at com.nyaysetu.backend.controller.DocumentManagementControllerTest.downloadCertificate_shouldReturn500WhenCertificateGenerationFails(DocumentManagementControllerTest.java:83)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithoutCancellationToken(LauncherAdapter.java:60)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:52)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-07-02 00:44:04 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.controller.HealthControllerTest]: HealthControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:44:04 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.controller.HealthControllerTest
+2026-07-02 00:44:04 [main] INFO  c.n.b.c.HealthControllerTest - Starting HealthControllerTest using Java 21.0.8 with PID 17520 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:44:04 [main] INFO  c.n.b.c.HealthControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-07-02 00:44:06 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name org.springframework.security.core.userdetails.UserDetailsService#0
+2026-07-02 00:44:06 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-02 00:44:06 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-02 00:44:06 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-07-02 00:44:06 [main] INFO  c.n.b.c.HealthControllerTest - Started HealthControllerTest in 1.651 seconds (process running for 18.853)
+2026-07-02 00:44:06 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.controller.RbacSecurityTest]: RbacSecurityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:44:06 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.controller.RbacSecurityTest
+2026-07-02 00:44:06 [main] INFO  c.n.b.controller.RbacSecurityTest - Starting RbacSecurityTest using Java 21.0.8 with PID 17520 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:44:06 [main] INFO  c.n.b.controller.RbacSecurityTest - The following 1 profile is active: "test"
+2026-07-02 00:44:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-02 00:44:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 367 ms. Found 27 JPA repository interfaces.
+2026-07-02 00:44:10 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-02 00:44:10 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-07-02 00:44:10 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-02 00:44:11 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-02 00:44:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-02 00:44:11 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-07-02 00:44:11 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-02 00:44:12 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-02 00:44:15 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-02 00:44:15 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:44:16 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-02 00:44:18 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-07-02 00:44:18 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-07-02 00:44:20 [main] INFO  c.n.b.s.DocumentGenerationService - 📝 DocumentGenerationService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:44:21 [main] INFO  c.n.backend.service.RagService - 🔗 RagService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:44:22 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-02 00:44:23 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-07-02 00:44:23 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-07-02 00:44:23 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 4 ms
+2026-07-02 00:44:23 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2026-07-02 00:44:23 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@127a77db]]
+2026-07-02 00:44:23 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2026-07-02 00:44:24 [main] INFO  c.n.b.controller.RbacSecurityTest - Started RbacSecurityTest in 17.595 seconds (process running for 36.691)
+2026-07-02 00:44:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: admin@nyay.com
+2026-07-02 00:44:24 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: judge@nyay.com
+2026-07-02 00:44:25 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: lawyer@nyay.com
+2026-07-02 00:44:25 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: litigant@nyay.com
+2026-07-02 00:44:25 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: client@nyay.com
+2026-07-02 00:44:25 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: tech@nyay.com
+2026-07-02 00:44:25 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: police@nyay.com
+2026-07-02 00:44:25 [main] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: GET /api/v1/cases from 127.0.0.1 | Content-Type: null | Auth: NULL
+2026-07-02 00:44:25 [main] INFO  c.n.b.c.CaseManagementController - Getting cases for user: litigant@example.com
+2026-07-02 00:44:25 [main] ERROR c.n.b.c.CaseManagementController - Error fetching cases for user litigant@example.com: User not found
+2026-07-02 00:44:25 [main] WARN  o.s.d.w.c.SpringDataJacksonConfiguration$PageModule$WarningLoggingModifier - Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-07-02 00:44:25 [main] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: GET /api/v1/cases -> Status: 200
+2026-07-02 00:44:25 [main] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: GET /api/v1/cases/pending-assignment from 127.0.0.1 | Content-Type: null | Auth: NULL
+2026-07-02 00:44:25 [main] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: GET /api/v1/cases/pending-assignment -> Status: 403
+2026-07-02 00:44:25 [main] INFO  c.n.b.filter.RequestLoggingFilter - >>> INCOMING REQUEST: GET /api/v1/judge/cases from 127.0.0.1 | Content-Type: null | Auth: NULL
+2026-07-02 00:44:25 [main] INFO  c.n.b.filter.RequestLoggingFilter - <<< RESPONSE: GET /api/v1/judge/cases -> Status: 403
+2026-07-02 00:44:26 [main] WARN  c.n.backend.filter.JwtAuthFilter - JWT validation failed: JWT expired 2198 milliseconds ago at 2026-07-01T19:14:24.000Z. Current time: 2026-07-01T19:14:26.198Z. Allowed clock skew: 0 milliseconds.
+2026-07-02 00:44:26 [main] WARN  c.n.backend.filter.JwtAuthFilter - JWT validation failed: Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 3
+2026-07-02 00:44:26 [main] WARN  c.n.backend.filter.RateLimitFilter - Rate limit exceeded for IP: 10.0.0.1 on endpoint: /api/v1/auth/login
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: B
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session B
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: B
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session B
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - Session A closed for user 1
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - Session A closed for user 1
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: A
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session A
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - WebSocket opened: B
+2026-07-02 00:44:27 [main] INFO  c.n.b.h.NotificationWebSocketHandler - User 1 authenticated with session B
+2026-07-02 00:44:27 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.NyaySetuBackendApplicationTests]: NyaySetuBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:44:27 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.NyaySetuBackendApplicationTests
+2026-07-02 00:44:27 [main] INFO  c.n.b.NyaySetuBackendApplicationTests - Starting NyaySetuBackendApplicationTests using Java 21.0.8 with PID 17520 (started by DELL GUNA in F:\sem 6\minar project\nyaysetu-backend)
+2026-07-02 00:44:27 [main] INFO  c.n.b.NyaySetuBackendApplicationTests - The following 1 profile is active: "test"
+2026-07-02 00:44:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-02 00:44:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 128 ms. Found 27 JPA repository interfaces.
+2026-07-02 00:44:29 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-02 00:44:29 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-07-02 00:44:29 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-02 00:44:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-07-02 00:44:29 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
+2026-07-02 00:44:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-07-02 00:44:29 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-02 00:44:29 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-02 00:44:30 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:44:30 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-07-02 00:44:30 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-07-02 00:44:31 [main] INFO  c.n.b.s.DocumentGenerationService - 📝 DocumentGenerationService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:44:31 [main] INFO  c.n.backend.service.RagService - 🔗 RagService configured to use LawGPT at: http://localhost:8001
+2026-07-02 00:44:32 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-02 00:44:32 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2026-07-02 00:44:32 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@949f7c1]]
+2026-07-02 00:44:32 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2026-07-02 00:44:32 [main] INFO  c.n.b.NyaySetuBackendApplicationTests - Started NyaySetuBackendApplicationTests in 5.244 seconds (process running for 45.545)
+2026-07-02 00:44:33 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: admin@nyay.com
+2026-07-02 00:44:33 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: judge@nyay.com
+2026-07-02 00:44:33 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: lawyer@nyay.com
+2026-07-02 00:44:33 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: litigant@nyay.com
+2026-07-02 00:44:33 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: client@nyay.com
+2026-07-02 00:44:33 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: tech@nyay.com
+2026-07-02 00:44:33 [main] INFO  com.nyaysetu.backend.DataLoader - New user created: police@nyay.com
+2026-07-02 00:44:34 [main] ERROR c.n.b.service.CaseManagementService - Failed to auto-generate draft document
+java.lang.NullPointerException: Cannot invoke "String.getBytes()" because "draftContent" is null
+	at com.nyaysetu.backend.service.CaseManagementService.sendDraftForApproval(CaseManagementService.java:147)
+	at com.nyaysetu.backend.service.CaseManagementServiceTest.lambda$sendDraftForApproval_swallowsException_whenDraftContentIsNull$1(CaseManagementServiceTest.java:61)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3199)
+	at com.nyaysetu.backend.service.CaseManagementServiceTest.sendDraftForApproval_swallowsException_whenDraftContentIsNull(CaseManagementServiceTest.java:61)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithoutCancellationToken(LauncherAdapter.java:60)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:52)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-07-02 00:44:34 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nyaysetu.backend.service.SoftDeleteIntegrationTest]: SoftDeleteIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-07-02 00:44:34 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nyaysetu.backend.NyaySetuBackendApplication for test class com.nyaysetu.backend.service.SoftDeleteIntegrationTest
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@127a77db]]
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@949f7c1]]
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-07-02 00:44:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.

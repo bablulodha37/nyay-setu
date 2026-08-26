@@ -1,0 +1,14 @@
+com\nyaysetu\backend\service\CaseManagementServiceTest.class
+com\nyaysetu\backend\service\JwtServiceTest.class
+com\nyaysetu\backend\handler\NotificationWebSocketHandlerTest.class
+com\nyaysetu\backend\NyaySetuBackendApplicationTests.class
+com\nyaysetu\backend\controller\HealthControllerTest.class
+com\nyaysetu\backend\filter\JwtAuthFilterTest.class
+com\nyaysetu\backend\filter\RateLimitFilterTest.class
+com\nyaysetu\backend\service\SoftDeleteIntegrationTest.class
+com\nyaysetu\backend\controller\DocumentManagementControllerTest.class
+com\nyaysetu\backend\notification\service\NotificationServiceTest.class
+com\nyaysetu\backend\controller\DocumentGenerationControllerTest.class
+com\nyaysetu\backend\controller\RbacSecurityTest.class
+com\nyaysetu\backend\service\DocumentManagementServiceTest.class
+com\nyaysetu\backend\config\WebSocketSecurityInterceptorTest.class
